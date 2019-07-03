@@ -194,17 +194,17 @@
 
        // function qty
        function Qty(){
-        var product_id = $('#product_id').val();
-        
-        if(product_id != ''){
-          var sales_price = $('#sales_price').val();
-          var qty = $('#qty').val();
-          if(sales_price != '' && qty!= ''){
-            var total_price = parseFloat(sales_price) * parseFloat(qty);
-            $('#total_price').val(total_price);
-          }
-        }
-       }
+          var product_id = $('#product_id').val();
+          
+          if(product_id != ''){
+            var sales_price = $('#sales_price').val();
+            var qty = $('#qty').val();
+            if(sales_price != '' && qty!= ''){
+              var total_price = parseFloat(sales_price) * parseFloat(qty);
+              $('#total_price').val(total_price);
+            }
+         }
+     }
 
        //check available qty
         function Qty(){
@@ -269,12 +269,15 @@
                },
                sales_price : {
                    required : true,
+                   number: true,
                },
                qty : {
                    required : true,
+                   number: true,
                },
                paid_ammount : {
                    required : true,
+                   number: true,
                }
            },
            messages : {
@@ -284,12 +287,15 @@
                },
                sales_price : {
                    required : 'please give product price',
+                   number: 'invalid format',
                },
                qty : {
                    required : 'pleae give product quantity',
+                    number: 'invalid format',
                },
                paid_ammount : {
                    required : 'please give paid ammount',
+                   number: 'invalid format',
                }
                
            }

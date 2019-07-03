@@ -263,12 +263,15 @@
                },
                purchase_price : {
                    required : true,
+                   number: true,
                },
                qty : {
                    required : true,
+                   number: true,
                },
                paid_ammount : {
                    required : true,
+                   number: true,
                }
            },
            messages : {
@@ -289,12 +292,15 @@
                },
                purchase_price : {
                    required : 'please give product price',
+                   number: 'invalid format',
                },
                qty : {
                    required : 'pleae give product quantity',
+                   number: 'invalid format',
                },
                paid_ammount : {
                    required : 'please give paid ammount',
+                   number: 'invalid format',
                }
                
            }

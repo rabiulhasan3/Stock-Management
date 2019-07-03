@@ -49,6 +49,7 @@
                 <tbody>
                   
                 	@foreach($stock_all_product as $key=>$single_stock_product)
+                  <tr>
                     <td>{{ ++$key }}</td>
                       <td class="text-center"><img class="img-responsive" src="{{ asset('uploads/products/'.$single_stock_product->product->image) }}" style="height: 60px; width: 60px;" alt=""></td>
                       <td>{{ $single_stock_product->product->name }}</td>
@@ -59,6 +60,8 @@
                           <i class="fa fa-eye" aria-hidden="true"></i>
                         </a>
                      </td>
+                  </tr>
+                    
                   @endforeach
                 </tbody>
               </table>
